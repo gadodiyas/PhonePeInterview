@@ -1,6 +1,7 @@
 import controller.CalenderManager;
 import model.Event;
 import model.TimeSlot;
+import model.enums.RecurringFrequency;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -45,6 +46,10 @@ public class Main {
         Event event4 =  calenderManager.createEvent(Arrays.asList(userId_2), LocalDate.of(2023, Month.MARCH, 13),
                 LocalTime.of(12, 0), LocalTime.of(13, 0), "Planning", userId_2);
         List<Event> eventList5 = calenderManager.getConflicts(userId_2, LocalDate.of(2023, Month.MARCH, 13));
+
+        int recurringId = calenderManager.createEvent(Arrays.asList(userId_2), LocalDate.of(2023, Month.MARCH, 13),
+                LocalTime.of(12, 0), LocalTime.of(13, 0), "Planning", userId_2, RecurringFrequency.WEEKLY, 5);
+
 
     }
 

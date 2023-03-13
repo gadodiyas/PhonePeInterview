@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UserRepository {
-    Map<Integer, User> map = new HashMap<>();
+    static Map<Integer, User> map = new HashMap<>();
 
     public User getUser(int id) {
         User user = map.get(id);

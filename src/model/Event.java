@@ -17,6 +17,9 @@ public class Event {
 
     private int hostId;
 
+    private Integer recurringId;
+
+
     public Event(LocalDate date, LocalTime startTime, LocalTime endTime, String eventName, List<Integer> userIds, int hostId) {
         this.date = date;
         this.startTime = startTime;
@@ -53,6 +56,14 @@ public class Event {
 
     public List<Integer> getUserIds() {
         return userIds;
+    }
+
+    public void setRecurringId(Integer recurringId) {
+        this.recurringId = recurringId;
+    }
+
+    public Integer getRecurringId() {
+        return recurringId;
     }
 
     @Override
